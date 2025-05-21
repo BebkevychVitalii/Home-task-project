@@ -33,7 +33,7 @@ describe('Top shows', () => {
     cy.get('h3', { timeout: 30000 }).should('contain', 'Discover Shows (25)');
     cy.wait(1000);
   });
-  it('should verify top 25 shows titles are vivible', () => {
+  it('should verify top 25 shows titles are visible', () => {
     shows.forEach((show) => {
       cy.contains('span[data-test-id="Ellipsis"]', show, { timeout: 20000 })
         .should('exist')
